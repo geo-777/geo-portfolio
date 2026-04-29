@@ -9,24 +9,36 @@ const Navbar = ({ setTheme, theme }) => {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  const navLinks = (
+    <>
+      <li onClick={closeMenu}>
+        <span>01. </span>About
+      </li>
+      <li onClick={closeMenu}>
+        <span>02. </span>Projects
+      </li>
+      <li onClick={closeMenu}>
+        <span>03. </span>Experiences
+      </li>
+      <li onClick={closeMenu}>
+        <span>04. </span>Contact
+      </li>
+    </>
+  );
+
   return (
     <nav>
       <span className="dev-icon">~/dev</span>
       
+      {/* Desktop Links */}
+      <ul className="desktop-links links">
+        {navLinks}
+      </ul>
+
+      {/* Mobile Overlay */}
       <div className={`nav-overlay ${isOpen ? "open" : ""}`}>
         <ul className="links">
-          <li onClick={closeMenu}>
-            <span>01. </span>About
-          </li>
-          <li onClick={closeMenu}>
-            <span>02. </span>Projects
-          </li>
-          <li onClick={closeMenu}>
-            <span>03. </span>Experiences
-          </li>
-          <li onClick={closeMenu}>
-            <span>04. </span>Contact
-          </li>
+          {navLinks}
         </ul>
         <button className="close-btn" onClick={closeMenu}>
           <X size={36} strokeWidth={2} />
