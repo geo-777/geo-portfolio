@@ -19,7 +19,7 @@ const ParticleField = () => {
 
     const init = () => {
       resize();
-      particles = Array.from({ length: 90 }, () => ({
+      particles = Array.from({ length: 45 }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.3,
