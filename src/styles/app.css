@@ -78,3 +78,11 @@ nav {
   background-color: var(--primary);
   color: var(--primary-foreground);
 }
+
+.particle-field-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  display: block;
+}

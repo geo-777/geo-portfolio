@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./styles/app.css";
 import "./styles/theme.css";
 import Navbar from "./components/Navbar";
-
+import ParticleField from "./components/ParticleField";
 const getInitialTheme = () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) return savedTheme;
@@ -24,6 +24,7 @@ const App = () => {
 
   return (
     <div className="app">
+      <ParticleField />
       <Navbar theme={theme} setTheme={setTheme} />
     </div>
   );
