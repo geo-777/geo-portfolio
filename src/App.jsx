@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import ParticleField from "./components/ParticleField";
 import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
+import Home from "./components/Home";
 const getInitialTheme = () => {
   const savedTheme = localStorage.getItem("theme");
   if (savedTheme) return savedTheme;
@@ -28,6 +29,7 @@ const App = () => {
     <div className="app">
       <ParticleField />
       <Navbar theme={theme} setTheme={setTheme} />
+      <Home />
       <ContactUs />
       <Footer theme={theme} />
     </div>
