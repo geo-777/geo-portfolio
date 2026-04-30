@@ -106,7 +106,9 @@ nav {
   border: none;
   color: var(--foreground);
   cursor: pointer;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 .close-btn:hover {
   color: var(--primary);
@@ -122,18 +124,18 @@ nav {
     display: flex;
     align-items: center;
   }
-  
+
   .desktop-links {
     display: none;
   }
-  
+
   .nav-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--card); /* respects the theme */
+    background-color: var(--card);
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -142,21 +144,23 @@ nav {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
-    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease,
+      visibility 0.4s;
   }
-  
+
   .nav-overlay.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
 
-  /* Make links vertical layout and large text */
   .nav-overlay .links {
     flex-direction: column;
     gap: 2.5rem;
   }
-  
+
   .nav-overlay .links li {
     font-size: 1.5rem;
   }
@@ -219,7 +223,20 @@ footer {
   line-height: 1.8rem;
   display: block;
 }
-
+.whatsapp-link {
+  display: flex;
+  background-image: linear-gradient(
+    135deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+  color: var(--primary-foreground);
+  gap: 0.4rem;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+}
 @media (max-width: 850px) {
   .contactUs {
     gap: 1rem;
@@ -232,6 +249,6 @@ footer {
     font-size: 16px;
   }
   .contact-desc-lines {
-    display: inline; /* allows smooth paragraph wrapping on small screens */
+    display: inline;
   }
 }

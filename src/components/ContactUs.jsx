@@ -1,3 +1,5 @@
+import { Send } from "lucide-react";
+
 const ContactUs = () => {
   return (
     <section className="contactUs">
@@ -13,12 +15,19 @@ const ContactUs = () => {
         </span>
         <span className="contact-desc-lines">— I'll get back fast.</span>
       </p>
-      <button>Say Hello!</button>
+      <a
+        href="https://wa.me/919400779364?text=Hey%20Georgy"
+        target="_blank"
+        className="whatsapp-link"
+      >
+        <Send size={18} />
+        <p>Say Hello!</p>
+      </a>
       <div className="contact-links">
-        <div className="contact-link-item"></div>
-        <div className="contact-link-item"></div>
-        <div className="contact-link-item"></div>
-        <div className="contact-link-item"></div>
+        <a className="contact-link-item"></a>
+        <a className="contact-link-item"></a>
+        <a className="contact-link-item"></a>
+        <a className="contact-link-item"></a>
       </div>
     </section>
   );
