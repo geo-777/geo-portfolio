@@ -11,7 +11,7 @@
 
   --primary: hsl(215 90% 55%);
   --primary-foreground: hsl(0 0% 100%);
-
+  --primary-opacity: rgba(37, 123, 244, 0.5);
   --secondary: hsl(210 15% 90%);
   --secondary-foreground: hsl(220 20% 25%);
 
@@ -26,7 +26,7 @@
 
   --border: hsl(215 20% 88%);
   --input: hsl(215 20% 88%);
-  --ring: hsl(215 90% 55%);
+  --ring: 215 90% 55%;
 
   --radius: 0.75rem;
 
@@ -43,6 +43,8 @@
   /* Gradients */
   --gradient-start: hsl(215 90% 55%);
   --gradient-end: hsl(170 70% 45%);
+
+  --padding-main: 4rem 12vw;
 }
 
 /* Dark Mode */
@@ -52,13 +54,14 @@ html.dark,
   --background: hsl(240 10% 4%);
   --foreground: hsl(0 0% 93%);
 
-  --card: hsl(240 8% 8%);
+  --card: hsl(240, 6%, 7%);
   --card-foreground: hsl(0 0% 93%);
 
   --popover: hsl(240 8% 8%);
   --popover-foreground: hsl(0 0% 93%);
 
   --primary: hsl(160 84% 39%);
+  --primary-opacity: rgba(16, 183, 127, 0.5);
   --primary-foreground: hsl(240 10% 4%);
 
   --secondary: hsl(240 6% 12%);
@@ -75,7 +78,7 @@ html.dark,
 
   --border: hsl(240 6% 14%);
   --input: hsl(240 6% 14%);
-  --ring: hsl(160 84% 39%);
+  --ring: 160 84% 39%;
 
   --sidebar-background: hsl(240 8% 8%);
   --sidebar-foreground: hsl(0 0% 93%);

@@ -1,3 +1,4 @@
+import { Terminal } from "lucide-react";
 const Home = () => {
   const codeLines = [
     { text: "const developer = {", delay: 0.8 },
@@ -29,7 +30,21 @@ const Home = () => {
           <button className="home-cta get-in-touch">Get in touch</button>
         </div>
       </div>
-      <div className="home-right"></div>
+      <div className="home-right">
+        <div className="code-window">
+          <div className="code-window-header">
+            <div className="cwh-action-btns">
+              <span className="cwh-action-btn-item red-action-btn"></span>
+              <span className="cwh-action-btn-item yellow-action-btn"></span>
+              <span className="cwh-action-btn-item"></span>
+            </div>
+            <div className="cwh-heading">
+              {" "}
+              <Terminal size={12} /> <p>profile.ts</p>{" "}
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
